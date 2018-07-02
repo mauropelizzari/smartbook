@@ -9,6 +9,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import com.vaadin.annotations.Theme;
 import com.vaadin.server.VaadinRequest;
+import com.vaadin.shared.ui.MarginInfo;
 import com.vaadin.spring.annotation.SpringUI;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.UI;
@@ -35,18 +36,19 @@ public class SmartbookApplication {
 		@Override
 		protected void init(VaadinRequest request) {
 			
-			final VerticalLayout header = new VerticalLayout();
-//			final VerticalLayout content = new VerticalLayout();
+			final VerticalLayout main = new VerticalLayout();
+			main.setSpacing(false);
 			
-			header.addComponent(mainMenuBuilder.buildMenu(selectedItem -> {
-				
+			final VerticalLayout content = new VerticalLayout();
+			
+			main.addComponent(mainMenuBuilder.buildMenu(selectedItem -> {
 				Label label = new Label("Apertura menu "  + selectedItem.getText());
-				
-				header.addComponent(label);
-				
+				content.removeAllComponents();
+				content.addComponent(label);
 			}));
 			
-			setContent(header);
+			main.addComponent(content);			
+			setContent(main);
 		}
 
 	}
