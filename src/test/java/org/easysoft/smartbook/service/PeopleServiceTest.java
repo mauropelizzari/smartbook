@@ -5,8 +5,10 @@ import static org.junit.Assert.assertTrue;
 import org.easysoft.smartbook.beans.People;
 import org.easysoft.smartbook.services.BaseService;
 import org.easysoft.smartbook.services.PeopleService;
+import org.junit.Ignore;
 import org.junit.Test;
 
+@Ignore
 public class PeopleServiceTest {
 
 	

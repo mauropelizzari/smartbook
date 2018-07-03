@@ -7,15 +7,15 @@ import org.easysoft.smartbook.beans.MenuFunction;
 import org.springframework.stereotype.Service;
 
 @Service
-public class MenuService {
+public class SmbkMenuService {
 	
 	public List<MenuFunction> getMenuItems() {
 		List<MenuFunction> items = new ArrayList<MenuFunction>();
-		items.add(new MenuFunction("Libri", "Libri"));
-		items.add(new MenuFunction("Autori", "Autori"));
-		items.add(new MenuFunction("Illustratori", "Illustratori"));
-		items.add(new MenuFunction("Generi", "Generi"));
-		items.add(new MenuFunction("Case editrici", "Case editrici"));
+		items.add(new MenuFunction("book", "Libri"));
+		items.add(new MenuFunction("author", "Autori"));
+		items.add(new MenuFunction("illustrator", "Illustratori"));
+		items.add(new MenuFunction("argument", "Generi"));
+		items.add(new MenuFunction("editor", "Case editrici"));
 		return items;
 	}
 	
