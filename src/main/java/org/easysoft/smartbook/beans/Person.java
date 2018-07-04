@@ -2,7 +2,7 @@ package org.easysoft.smartbook.beans;
 
 import java.io.Serializable;
 
-public class People implements Serializable{
+public class Person implements Serializable{
 
 	private static final long serialVersionUID = 3430403731165679788L;
 	private String id;

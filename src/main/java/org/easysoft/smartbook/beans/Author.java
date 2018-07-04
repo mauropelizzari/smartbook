@@ -1,6 +1,6 @@
 package org.easysoft.smartbook.beans;
 
-public class Author extends People {
+public class Author extends Person {
 
 	private static final long serialVersionUID = 3517839858692145478L;
 	
