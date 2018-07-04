@@ -38,4 +38,6 @@ public class SmbkApplication {
 	}
 	
 	//primo commit da revertare
+	
+	//secondo commit da revertare
 }
