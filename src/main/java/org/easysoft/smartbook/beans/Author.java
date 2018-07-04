@@ -13,9 +13,5 @@ public class Author extends People {
 	public void setId_book(String id_book) {
 		this.id_book = id_book;
 	}
-	
-	
-	
-	
 
 }

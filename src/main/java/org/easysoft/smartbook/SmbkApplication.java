@@ -19,7 +19,6 @@ public class SmbkApplication {
 		SpringApplication.run(SmbkApplication.class, args);
 	}
 	
-
 	@Theme("valo")
 	@SpringUI(path = "")
 	public static class VaadinUI extends UI {
