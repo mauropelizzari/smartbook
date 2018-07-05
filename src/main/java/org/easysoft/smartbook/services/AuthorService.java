@@ -8,16 +8,6 @@ import org.springframework.stereotype.Service;
 @Service
 public class AuthorService implements BaseService<Author> {
 
-	public String sayHi() {
-		return "Hello AuthorService!";
-	}
-
-	@Override
-	public boolean save(Author entity) {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
 	@Override
 	public boolean delete(Author entity) {
 		// TODO Auto-generated method stub
@@ -34,6 +24,20 @@ public class AuthorService implements BaseService<Author> {
 	public List<Author> list(Author entity) {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+
+	@Override
+	public boolean insert(Author entity) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+
+	@Override
+	public boolean update(Author entity) {
+		// TODO Auto-generated method stub
+		return false;
 	}
 
 	

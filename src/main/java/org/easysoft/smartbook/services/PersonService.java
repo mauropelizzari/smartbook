@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 public class PersonService implements BaseService<Person> {
 
 	@Override
-	public boolean save(Person entity) {
+	public boolean insert(Person entity) {
 		SqlSession sqlSession = MyBatisUtil.getSqlSessionFactory().openSession();
 		try{
 			PersonMapper peronsMapper = sqlSession.getMapper(PersonMapper.class);
@@ -39,8 +39,19 @@ public class PersonService implements BaseService<Person> {
 
 	@Override
 	public List<Person> list(Person entity) {
+		SqlSession sqlSession = MyBatisUtil.getSqlSessionFactory().openSession();
+		try{
+			PersonMapper peronsMapper = sqlSession.getMapper(PersonMapper.class);
+			return peronsMapper.list(entity);
+		} finally{
+			sqlSession.close();
+		}
+	}
+
+	@Override
+	public boolean update(Person entity) {
 		// TODO Auto-generated method stub
-		return null;
+		return false;
 	}
 
 }

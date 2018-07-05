@@ -4,7 +4,9 @@ import java.util.List;
 
 public interface BaseService<T> {
 	
-	public boolean save(T entity);
+	public boolean insert(T entity);
+
+	public boolean update(T entity);
 	
 	public boolean delete(T entity);
 	
