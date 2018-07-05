@@ -1,6 +1,13 @@
 package org.easysoft.smartbook.ui;
 
 
+import java.util.List;
+
+import org.easysoft.smartbook.beans.Person;
+import org.easysoft.smartbook.services.BaseService;
+import org.easysoft.smartbook.services.PersonService;
+
+import com.vaadin.ui.Grid;
 import com.vaadin.ui.VerticalLayout;
 
 /**
@@ -15,14 +22,23 @@ public class SmbkPageContent extends VerticalLayout {
 	//pannello filtri ricerca
 	
 	//griglia
+//	private Grid<T> grid;
 	
 	//dettaglio laterale
 	
 	public SmbkPageContent() {
 		super();
 		this.setSpacing(false);
+		
+		
+		
 	}
 
+	public void loadResult() {
+		// fetch list of Customers from service and assign it to Grid
+//	    List<Person> results = service.list(new Person);
+//	    grid.setItems(results);
+	}
 	
 
 }

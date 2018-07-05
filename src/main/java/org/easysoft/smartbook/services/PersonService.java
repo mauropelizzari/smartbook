@@ -6,9 +6,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.easysoft.smartbook.beans.Person;
 import org.easysoft.smartbook.db.mappers.MyBatisUtil;
 import org.easysoft.smartbook.db.mappers.PersonMapper;
-import org.springframework.stereotype.Service;
 
-@Service
 public class PersonService implements BaseService<Person> {
 
 	@Override

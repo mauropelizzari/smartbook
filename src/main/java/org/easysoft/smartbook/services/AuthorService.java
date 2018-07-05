@@ -3,9 +3,7 @@ package org.easysoft.smartbook.services;
 import java.util.List;
 
 import org.easysoft.smartbook.beans.Author;
-import org.springframework.stereotype.Service;
 
-@Service
 public class AuthorService implements BaseService<Author> {
 
 	@Override

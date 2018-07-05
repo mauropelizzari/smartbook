@@ -2,7 +2,7 @@ package org.easysoft.smartbook.beans;
 
 import java.io.Serializable;
 
-public class Author implements Serializable {
+public class Editor implements Serializable {
 
 	private static final long serialVersionUID = 3517839858692145478L;
 	

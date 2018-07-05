@@ -2,6 +2,11 @@ package org.easysoft.smartbook.service;
 
 import static org.junit.Assert.assertTrue;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.security.MessageDigest;
 import java.util.List;
 
 import org.easysoft.smartbook.beans.Person;
@@ -32,4 +37,43 @@ public class PersonServiceTest {
 		List<Person> results = service.list(p);
 		assertTrue(results.size()>0);
 	}
+	
+//	@Test
+//	public void getCecksum() throws IOException {
+//		File contentFile = new File("C:\\Users\\mauropelizzari\\Desktop\\XXXX.pdf");
+//		 byte[] bytesArray = new byte[(int) contentFile.length()]; 
+//
+//		  FileInputStream fis = new FileInputStream(contentFile);
+//		  fis.read(bytesArray); //read file into bytes[]
+//		  fis.close();
+//		  
+//		System.out.println(calcolaMD5(bytesArray));
+//	}
+//	
+//	private String calcolaMD5(byte[] content)  {
+//		try {
+//
+//
+//			MessageDigest md = MessageDigest.getInstance("MD5");
+//			md.update(content);
+//
+//			byte[] digest = md.digest();
+//
+//			String printHexBinary = "";
+//
+//			for (int i=0; i < digest.length; i++) {
+//				printHexBinary += Integer.toString( ( digest[i] & 0xff ) + 0x100, 16).substring( 1 );
+//			}
+//
+//			System.out.println("printHexBinary="+printHexBinary.toUpperCase());
+//
+//			return printHexBinary.toUpperCase();
+//
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//		}
+//		return null;
+//	}
+	
+	
 }
