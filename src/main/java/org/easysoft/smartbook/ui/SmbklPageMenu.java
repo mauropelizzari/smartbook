@@ -3,9 +3,13 @@ package org.easysoft.smartbook.ui;
 
 import org.easysoft.smartbook.services.SmbkMenuService;
 
-import com.vaadin.ui.Label;
 import com.vaadin.ui.MenuBar;
 
+/**
+ * MenuBar component
+ * @author mauropelizzari
+ *
+ */
 public class SmbklPageMenu extends MenuBar {
 
 	private static final long serialVersionUID = 6668318238947687026L;
@@ -21,9 +25,7 @@ public class SmbklPageMenu extends MenuBar {
 		this.parentPage = parentPage;
 		menuService.getMenuItems().forEach( item -> {
 			Command command = selectedItem -> {
-				Label label = new Label("Apertura menu "  + selectedItem.getText());
-				parentPage.clearContent();
-				parentPage.getContent().addComponent(label);
+				parentPage.loadContent(item);
 			};
 			addItem(item.getDescription(), command);
 		});

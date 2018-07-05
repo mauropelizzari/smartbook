@@ -1,11 +1,16 @@
 package org.easysoft.smartbook.ui;
 
+import org.easysoft.smartbook.beans.MenuFunction;
 import org.easysoft.smartbook.services.SmbkMenuService;
 
-import com.vaadin.ui.MenuBar.MenuItem;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.VerticalLayout;
 
+/**
+ * Page Component
+ * @author mauropelizzari
+ *
+ */
 public class SmbkPage extends VerticalLayout {
 
 	private static final long serialVersionUID = -1184192997171577652L;
@@ -31,15 +36,24 @@ public class SmbkPage extends VerticalLayout {
 	/**
 	 * Clear all content page
 	 */
-	public void clearContent() {
+	private void clearContent() {
 		if (content==null)
 			return;
 		
 		content.removeAllComponents();
 	}
 	
-	public void loadContent(MenuItem mItem) {
-		Label label = new Label("Apertura menu "  + mItem.getText());
+	/**
+	 * Load content page
+	 * @param mFunction
+	 */
+	public void loadContent(MenuFunction mFunction) {
+		
+		//recupera il pageContentBuilder in funzione del menuItem
+		
+		clearContent();
+		Label label = new Label("Apertura menu "  + mFunction.getDescription());
+		
 		content.addComponent(label);
 	}
 	
