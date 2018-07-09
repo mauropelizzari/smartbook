@@ -34,27 +34,11 @@ public class SmbkPage extends VerticalLayout {
 	}
 	
 	/**
-	 * Clear all content page
-	 */
-	private void clearContent() {
-		if (content==null)
-			return;
-		
-		content.removeAllComponents();
-	}
-	
-	/**
 	 * Load content page
 	 * @param mFunction
 	 */
 	public void loadContent(MenuFunction mFunction) {
-		
-		//recupera il pageContentBuilder in funzione del menuItem
-		
-		clearContent();
-		Label label = new Label("Apertura menu "  + mFunction.getDescription());
-		
-		content.addComponent(label);
+		content.loadResult(mFunction);
 	}
 	
 	private void init(SmbkMenuService menuService) {

@@ -7,7 +7,7 @@ import org.easysoft.smartbook.beans.Person;
 import org.easysoft.smartbook.db.mappers.MyBatisUtil;
 import org.easysoft.smartbook.db.mappers.PersonMapper;
 
-public class PersonService implements BaseService<Person> {
+public class PersonService extends BaseService<Person> {
 
 	@Override
 	public boolean insert(Person entity) {
@@ -20,7 +20,6 @@ public class PersonService implements BaseService<Person> {
 		} finally{
 			sqlSession.close();
 		}
-
 	}
 
 	@Override
@@ -36,11 +35,11 @@ public class PersonService implements BaseService<Person> {
 	}
 
 	@Override
-	public List<Person> list(Person entity) {
+	public List<Person> search() {
 		SqlSession sqlSession = MyBatisUtil.getSqlSessionFactory().openSession();
 		try{
 			PersonMapper peronsMapper = sqlSession.getMapper(PersonMapper.class);
-			return peronsMapper.list(entity);
+			return peronsMapper.search();
 		} finally{
 			sqlSession.close();
 		}

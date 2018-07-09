@@ -2,16 +2,17 @@ package org.easysoft.smartbook.services;
 
 import java.util.List;
 
-public interface BaseService<T> {
+public abstract class BaseService<T> {
 	
-	public boolean insert(T entity);
+	public abstract boolean insert(T entity);
 
-	public boolean update(T entity);
+	public abstract boolean update(T entity);
 	
-	public boolean delete(T entity);
+	public abstract boolean delete(T entity);
 	
-	public T get(T entity);
+	public abstract T get(T entity);
 	
-	public List<T> list(T entity);
+	public abstract List<T> search();
+	
 
 }

@@ -2,9 +2,12 @@ package org.easysoft.smartbook.services;
 
 import java.util.List;
 
+import org.apache.ibatis.session.SqlSession;
 import org.easysoft.smartbook.beans.Illustrator;
+import org.easysoft.smartbook.db.mappers.IllustratorMapper;
+import org.easysoft.smartbook.db.mappers.MyBatisUtil;
 
-public class IllustratorService implements BaseService<Illustrator> {
+public class IllustratorService extends BaseService<Illustrator> {
 
 	@Override
 	public boolean delete(Illustrator entity) {
@@ -19,9 +22,14 @@ public class IllustratorService implements BaseService<Illustrator> {
 	}
 
 	@Override
-	public List<Illustrator> list(Illustrator entity) {
-		// TODO Auto-generated method stub
-		return null;
+	public List<Illustrator> search() {
+		SqlSession sqlSession = MyBatisUtil.getSqlSessionFactory().openSession();
+		try{
+			IllustratorMapper mapper = sqlSession.getMapper(IllustratorMapper.class);
+			return mapper.search();
+		} finally{
+			sqlSession.close();
+		}
 	}
 
 

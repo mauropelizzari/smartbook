@@ -2,11 +2,6 @@ package org.easysoft.smartbook.service;
 
 import static org.junit.Assert.assertTrue;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.security.MessageDigest;
 import java.util.List;
 
 import org.easysoft.smartbook.beans.Person;
@@ -15,7 +10,7 @@ import org.easysoft.smartbook.services.PersonService;
 import org.junit.Ignore;
 import org.junit.Test;
 
-//@Ignore
+@Ignore
 public class PersonServiceTest {
 
 
@@ -34,7 +29,7 @@ public class PersonServiceTest {
 	public void list() {
 		Person p = new Person();
 		BaseService<Person> service = new PersonService();
-		List<Person> results = service.list(p);
+		List<Person> results = service.search();
 		assertTrue(results.size()>0);
 	}
 	

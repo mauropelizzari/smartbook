@@ -2,9 +2,12 @@ package org.easysoft.smartbook.services;
 
 import java.util.List;
 
+import org.apache.ibatis.session.SqlSession;
 import org.easysoft.smartbook.beans.Argument;
+import org.easysoft.smartbook.db.mappers.ArgumentMapper;
+import org.easysoft.smartbook.db.mappers.MyBatisUtil;
 
-public class ArgumentService implements BaseService<Argument> {
+public class ArgumentService extends BaseService<Argument> {
 
 	@Override
 	public boolean delete(Argument entity) {
@@ -19,9 +22,14 @@ public class ArgumentService implements BaseService<Argument> {
 	}
 
 	@Override
-	public List<Argument> list(Argument entity) {
-		// TODO Auto-generated method stub
-		return null;
+	public List<Argument> search() {
+		SqlSession sqlSession = MyBatisUtil.getSqlSessionFactory().openSession();
+		try{
+			ArgumentMapper mapper = sqlSession.getMapper(ArgumentMapper.class);
+			return mapper.search();
+		} finally{
+			sqlSession.close();
+		}
 	}
 
 
