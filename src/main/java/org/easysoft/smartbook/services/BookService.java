@@ -4,8 +4,9 @@ import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
 import org.easysoft.smartbook.beans.Book;
-import org.easysoft.smartbook.db.mappers.BookMapper;
-import org.easysoft.smartbook.db.mappers.MyBatisUtil;
+import org.easysoft.smartbook.data.MyBatisUtil;
+import org.easysoft.smartbook.data.mappers.BookMapper;
+
 
 public class BookService extends BaseService<Book> {
 
@@ -45,6 +46,7 @@ public class BookService extends BaseService<Book> {
 		// TODO Auto-generated method stub
 		return false;
 	}
+
 
 	
 }

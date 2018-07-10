@@ -4,8 +4,9 @@ import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
 import org.easysoft.smartbook.beans.Person;
-import org.easysoft.smartbook.db.mappers.MyBatisUtil;
-import org.easysoft.smartbook.db.mappers.PersonMapper;
+import org.easysoft.smartbook.data.MyBatisUtil;
+import org.easysoft.smartbook.data.mappers.PersonMapper;
+
 
 public class PersonService extends BaseService<Person> {
 
@@ -50,5 +51,6 @@ public class PersonService extends BaseService<Person> {
 		// TODO Auto-generated method stub
 		return false;
 	}
+
 
 }

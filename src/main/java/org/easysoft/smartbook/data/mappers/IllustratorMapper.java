@@ -1,4 +1,4 @@
-package org.easysoft.smartbook.db.mappers;
+package org.easysoft.smartbook.data.mappers;
 
 import java.util.List;
 

@@ -10,7 +10,7 @@
 	</insert>
 
 
-	<select id="search" resultType="list">
+	<select id="search" resultType="Person">
 		select * from Person
 	</select>
 </mapper>

@@ -3,7 +3,6 @@ package org.easysoft.smartbook.ui;
 import org.easysoft.smartbook.beans.MenuFunction;
 import org.easysoft.smartbook.services.SmbkMenuService;
 
-import com.vaadin.ui.Label;
 import com.vaadin.ui.VerticalLayout;
 
 /**
@@ -38,7 +37,7 @@ public class SmbkPage extends VerticalLayout {
 	 * @param mFunction
 	 */
 	public void loadContent(MenuFunction mFunction) {
-		content.loadResult(mFunction);
+		content.drawContent(mFunction);
 	}
 	
 	private void init(SmbkMenuService menuService) {

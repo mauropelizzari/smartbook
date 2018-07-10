@@ -2,7 +2,7 @@ package org.easysoft.smartbook.beans;
 
 import java.io.Serializable;
 
-import org.easysoft.smartbook.services.BaseService;
+import org.easysoft.smartbook.ui.config.BasePageConfig;
 
 @SuppressWarnings("rawtypes")
 public class MenuFunction implements Serializable {
@@ -11,25 +11,19 @@ public class MenuFunction implements Serializable {
 	private String id;
 	private String description;
 	private String icon;
-	private BaseService service;
+	private BasePageConfig pageConfigurator;
 
-	public MenuFunction(String id, String description, BaseService service) {
+	public MenuFunction(String id, String description, BasePageConfig pageConfigurator) {
 		super();
 		this.id = id;
 		this.description = description;
-		this.service = service;
+		this.pageConfigurator = pageConfigurator;
 	}
-	public MenuFunction(String id, String description, String icon, BaseService service) {
-		this(id,description,service);
+	public MenuFunction(String id, String description, String icon, BasePageConfig pageConfigurator) {
+		this(id,description,pageConfigurator);
 		this.icon = icon;
 	}
 
-	public BaseService getService() {
-		return service;
-	}
-	public void setService(BaseService service) {
-		this.service = service;
-	}
 	public String getId() {
 		return id;
 	}
@@ -47,5 +41,11 @@ public class MenuFunction implements Serializable {
 	}
 	public void setIcon(String icon) {
 		this.icon = icon;
+	}
+	public BasePageConfig getPageConfigurator() {
+		return pageConfigurator;
+	}
+	public void setPageConfigurator(BasePageConfig pageConfigurator) {
+		this.pageConfigurator = pageConfigurator;
 	}
 }

@@ -4,8 +4,9 @@ import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
 import org.easysoft.smartbook.beans.Author;
-import org.easysoft.smartbook.db.mappers.AuthorMapper;
-import org.easysoft.smartbook.db.mappers.MyBatisUtil;
+import org.easysoft.smartbook.data.MyBatisUtil;
+import org.easysoft.smartbook.data.mappers.AuthorMapper;
+
 
 public class AuthorService extends BaseService<Author> {
 
@@ -45,6 +46,7 @@ public class AuthorService extends BaseService<Author> {
 		// TODO Auto-generated method stub
 		return false;
 	}
+
 
 	
 }

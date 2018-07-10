@@ -1,4 +1,4 @@
-package org.easysoft.smartbook.db.mappers;
+package org.easysoft.smartbook.data;
 
 import java.io.IOException;
 import java.io.Reader;

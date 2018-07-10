@@ -4,8 +4,9 @@ import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
 import org.easysoft.smartbook.beans.Argument;
-import org.easysoft.smartbook.db.mappers.ArgumentMapper;
-import org.easysoft.smartbook.db.mappers.MyBatisUtil;
+import org.easysoft.smartbook.data.MyBatisUtil;
+import org.easysoft.smartbook.data.mappers.ArgumentMapper;
+
 
 public class ArgumentService extends BaseService<Argument> {
 

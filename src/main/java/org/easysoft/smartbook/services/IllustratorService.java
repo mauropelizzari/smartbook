@@ -4,8 +4,9 @@ import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
 import org.easysoft.smartbook.beans.Illustrator;
-import org.easysoft.smartbook.db.mappers.IllustratorMapper;
-import org.easysoft.smartbook.db.mappers.MyBatisUtil;
+import org.easysoft.smartbook.data.MyBatisUtil;
+import org.easysoft.smartbook.data.mappers.IllustratorMapper;
+
 
 public class IllustratorService extends BaseService<Illustrator> {
 
@@ -45,6 +46,7 @@ public class IllustratorService extends BaseService<Illustrator> {
 		// TODO Auto-generated method stub
 		return false;
 	}
+
 
 	
 }

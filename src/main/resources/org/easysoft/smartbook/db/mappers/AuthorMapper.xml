@@ -3,7 +3,7 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="org.easysoft.smartbook.db.mappers.AuthorMapper">
-  <select id="search" resultType="list">
+  <select id="search" resultType="Author">
     select * from Author 
   </select>
 </mapper>

@@ -4,24 +4,36 @@
   "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
 
-  <properties resource="application.properties" />
-  
-  <environments default="development">
-    <environment id="development">
-      <transactionManager type="JDBC"/>
-      <dataSource type="POOLED">
-        <property name="driver" value="${driver}"/>
-        <property name="url" value="${url}"/>
-      </dataSource>
-    </environment>
-  </environments>
-  <mappers>
-    <mapper resource="org/easysoft/smartbook/db/mappers/ArgumentMapper.xml"/>
-    <mapper resource="org/easysoft/smartbook/db/mappers/EditorMapper.xml"/>
-    <mapper resource="org/easysoft/smartbook/db/mappers/BookMapper.xml"/>
-    <mapper resource="org/easysoft/smartbook/db/mappers/PersonMapper.xml"/>
-    <mapper resource="org/easysoft/smartbook/db/mappers/IllustratorMapper.xml"/>
-    <mapper resource="org/easysoft/smartbook/db/mappers/AuthorMapper.xml"/>
-  </mappers>
+	<properties resource="application.properties" />
+	
+	<typeAliases>
+		<typeAlias alias="Argument" type="org.easysoft.smartbook.beans.Argument" />
+		<typeAlias alias="Author" type="org.easysoft.smartbook.beans.Author" />
+		<typeAlias alias="Book" type="org.easysoft.smartbook.beans.Book" />
+		<typeAlias alias="Editor" type="org.easysoft.smartbook.beans.Editor" />
+		<typeAlias alias="Illustrator" type="org.easysoft.smartbook.beans.Illustrator" />
+		<typeAlias alias="Person" type="org.easysoft.smartbook.beans.Person" />
+	</typeAliases>
+
+	<environments default="development">
+		<environment id="development">
+			<transactionManager type="JDBC" />
+			<dataSource type="POOLED">
+				<property name="driver" value="${driver}" />
+				<property name="url" value="${url}" />
+			</dataSource>
+		</environment>
+	</environments>
+
+	<mappers>
+		<mapper resource="org/easysoft/smartbook/db/mappers/ArgumentMapper.xml" />
+		<mapper resource="org/easysoft/smartbook/db/mappers/EditorMapper.xml" />
+		<mapper resource="org/easysoft/smartbook/db/mappers/BookMapper.xml" />
+		<mapper resource="org/easysoft/smartbook/db/mappers/PersonMapper.xml" />
+		<mapper resource="org/easysoft/smartbook/db/mappers/IllustratorMapper.xml" />
+		<mapper resource="org/easysoft/smartbook/db/mappers/AuthorMapper.xml" />
+	</mappers>
+
+
 
 </configuration>

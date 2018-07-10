@@ -5,15 +5,15 @@ import java.io.Serializable;
 public class Person implements Serializable{
 
 	private static final long serialVersionUID = 3430403731165679788L;
-	private String id;
+	private Long id;
 	private String code;
 	private String name;      
 	private String surname;   
 	                          
-	public String getId() {
+	public Long getId() {
 		return id;
 	}
-	public void setId(String id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 	public String getCode() {
