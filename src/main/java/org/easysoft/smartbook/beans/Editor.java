@@ -7,7 +7,6 @@ public class Editor implements Serializable {
 	private static final long serialVersionUID = 3517839858692145478L;
 	
 	private Long id;
-	private String code;
 	private String description;
 	
 	public Long getId() {
@@ -15,12 +14,6 @@ public class Editor implements Serializable {
 	}
 	public void setId(Long id) {
 		this.id = id;
-	}
-	public String getCode() {
-		return code;
-	}
-	public void setCode(String code) {
-		this.code = code;
 	}
 	public String getDescription() {
 		return description;

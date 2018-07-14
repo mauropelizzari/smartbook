@@ -26,12 +26,12 @@
 	</environments>
 
 	<mappers>
-		<mapper resource="org/easysoft/smartbook/db/mappers/ArgumentMapper.xml" />
-		<mapper resource="org/easysoft/smartbook/db/mappers/EditorMapper.xml" />
-		<mapper resource="org/easysoft/smartbook/db/mappers/BookMapper.xml" />
-		<mapper resource="org/easysoft/smartbook/db/mappers/PersonMapper.xml" />
-		<mapper resource="org/easysoft/smartbook/db/mappers/IllustratorMapper.xml" />
-		<mapper resource="org/easysoft/smartbook/db/mappers/AuthorMapper.xml" />
+		<mapper resource="org/easysoft/smartbook/data/mappers/ArgumentMapper.xml" />
+		<mapper resource="org/easysoft/smartbook/data/mappers/EditorMapper.xml" />
+		<mapper resource="org/easysoft/smartbook/data/mappers/BookMapper.xml" />
+		<mapper resource="org/easysoft/smartbook/data/mappers/PersonMapper.xml" />
+		<mapper resource="org/easysoft/smartbook/data/mappers/IllustratorMapper.xml" />
+		<mapper resource="org/easysoft/smartbook/data/mappers/AuthorMapper.xml" />
 	</mappers>
 
 

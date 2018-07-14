@@ -14,7 +14,15 @@ public class Book implements Serializable {
 	private Long idArgument;
 	private String note;
 	private Long dateInsert;
+	private String editor;
+	private String argument;
 	
+	public String getArgument() {
+		return argument;
+	}
+	public void setArgument(String argument) {
+		this.argument = argument;
+	}
 	public Long getId() {
 		return id;
 	}
@@ -63,6 +71,20 @@ public class Book implements Serializable {
 	public void setDateInsert(Long dateInsert) {
 		this.dateInsert = dateInsert;
 	}
+	public String getEditor() {
+		return editor;
+	}
+	public void setEditor(String editor) {
+		this.editor = editor;
+	}
+	public String getDateInsertFormatted() {
+		String result = "";
+		if (dateInsert==null)
+			return "";
 
+		String strDate = dateInsert.toString();
+		result = strDate.substring(6, 8) + "/" + strDate.substring(4,6) + "/" + strDate.substring(0, 4);
+		return result;
+	}
 	
 }

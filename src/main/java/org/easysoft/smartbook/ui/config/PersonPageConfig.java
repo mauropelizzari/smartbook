@@ -10,8 +10,10 @@ public class PersonPageConfig extends BasePageConfig<Person> {
 	
 	@Override
 	public Grid<Person> getGrid() {
-		Grid<Person> grid = new Grid<Person>(Person.class);
-//		grid.setColumns("id","code","description");
+		Grid<Person> grid = new Grid<>();
+		grid.addColumn(Person::getCode).setCaption("CODICE");
+		grid.addColumn(Person::getName).setCaption("NOME");
+		grid.addColumn(Person::getSurname).setCaption("COGNOME");
 		return grid;
 	}
 

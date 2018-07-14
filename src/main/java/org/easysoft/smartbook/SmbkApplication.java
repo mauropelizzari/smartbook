@@ -20,7 +20,7 @@ public class SmbkApplication {
 	}
 	
 	@Theme("valo")
-	@SpringUI(path = "")
+	@SpringUI(path = "/giralapagina")
 	public static class VaadinUI extends UI {
 
 		private static final long serialVersionUID = 1L;

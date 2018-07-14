@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.easysoft.smartbook.data.mappers.BookMapper">
+
+	<resultMap id="result" type="Book" >
+		<result property="id" column="id" />
+		<result property="code" column="code" />
+		<result property="title" column="title" />
+		<result property="dateInsert" column="dateInsert" />
+		<result property="argument" column="argument" />
+		<result property="editor" column="editor" />
+	</resultMap>
+	
+  <select id="search" resultMap="result" >
+    select b.id id, b.code code , b.date_insert dateInsert,
+    b.title title , a.description argument, e.description editor
+    from Book b 
+    join Argument a on b.id_argument = a.id 
+    join Editor e on b.id_editor = e.id 
+  </select>
+</mapper>

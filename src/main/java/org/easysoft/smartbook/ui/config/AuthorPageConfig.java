@@ -10,8 +10,12 @@ public class AuthorPageConfig extends BasePageConfig<Author> {
 	
 	@Override
 	public Grid<Author> getGrid() {
-		Grid<Author> grid = new Grid<Author>(Author.class);
-//		grid.setColumns("id","code","description");
+		Grid<Author> grid = new Grid<>();
+		grid.addColumn(Author::getCodeAuthor).setCaption("CODICE");
+		grid.addColumn(Author::getNameAuthor).setCaption("NOME");
+		grid.addColumn(Author::getSurnameAuthor).setCaption("COGNOME");
+		grid.addColumn(Author::getCodeBook).setCaption("CODICE LIBRO");
+		grid.addColumn(Author::getTitleBook).setCaption("TITOLO LIBRO");
 		return grid;
 	}
 

@@ -8,6 +8,11 @@ public class Author implements Serializable {
 	
 	private Long id_book;
 	private Long id_person;
+	private String codeAuthor;
+	private String nameAuthor;
+	private String surnameAuthor;
+	private String codeBook;
+	private String titleBook;
 	
 	public Long getId_book() {
 		return id_book;
@@ -20,6 +25,36 @@ public class Author implements Serializable {
 	}
 	public void setId_person(Long id_person) {
 		this.id_person = id_person;
+	}
+	public String getCodeAuthor() {
+		return codeAuthor;
+	}
+	public void setCodeAuthor(String codeAuthor) {
+		this.codeAuthor = codeAuthor;
+	}
+	public String getNameAuthor() {
+		return nameAuthor;
+	}
+	public void setNameAuthor(String nameAuthor) {
+		this.nameAuthor = nameAuthor;
+	}
+	public String getSurnameAuthor() {
+		return surnameAuthor;
+	}
+	public void setSurnameAuthor(String surnameAuthor) {
+		this.surnameAuthor = surnameAuthor;
+	}
+	public String getCodeBook() {
+		return codeBook;
+	}
+	public void setCodeBook(String codeBook) {
+		this.codeBook = codeBook;
+	}
+	public String getTitleBook() {
+		return titleBook;
+	}
+	public void setTitleBook(String titleBook) {
+		this.titleBook = titleBook;
 	}
 
 

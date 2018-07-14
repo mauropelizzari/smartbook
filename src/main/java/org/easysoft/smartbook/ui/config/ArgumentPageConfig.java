@@ -10,8 +10,9 @@ public class ArgumentPageConfig extends BasePageConfig<Argument> {
 	
 	@Override
 	public Grid<Argument> getGrid() {
-		Grid<Argument> grid = new Grid<Argument>(Argument.class);
-		grid.setColumns("id","code","description");
+		Grid<Argument> grid = new Grid<>();
+		grid.addColumn(Argument::getCode).setCaption("CODICE");
+		grid.addColumn(Argument::getDescription).setCaption("DESCRIZIONE");
 		return grid;
 	}
 

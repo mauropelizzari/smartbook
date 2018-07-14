@@ -10,8 +10,9 @@ public class EditorPageConfig extends BasePageConfig<Editor> {
 	
 	@Override
 	public Grid<Editor> getGrid() {
-		Grid<Editor> grid = new Grid<Editor>(Editor.class);
-//		grid.setColumns("id","code","description");
+		Grid<Editor> grid = new Grid<>();
+		grid.addColumn(Editor::getId).setCaption("CODICE");
+		grid.addColumn(Editor::getDescription).setCaption("DESCRIZIONE");
 		return grid;
 	}
 

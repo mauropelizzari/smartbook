@@ -3,6 +3,7 @@ package org.easysoft.smartbook.service;
 import static org.junit.Assert.assertTrue;
 
 import java.util.List;
+import java.util.function.Function;
 
 import org.easysoft.smartbook.beans.Person;
 import org.easysoft.smartbook.services.BaseService;
@@ -12,7 +13,6 @@ import org.junit.Test;
 
 @Ignore
 public class PersonServiceTest {
-
 
 	@Test
 	public void insert() {

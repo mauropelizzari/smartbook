@@ -6,6 +6,11 @@ public class Illustrator extends Person {
 	
 	private Long id_book;
 	private Long id_person;
+	private String codeIllustrator;
+	private String nameIllustrator;
+	private String surnameIllustrator;
+	private String codeBook;
+	private String titleBook;
 	
 	public Long getId_book() {
 		return id_book;
@@ -18,5 +23,35 @@ public class Illustrator extends Person {
 	}
 	public void setId_person(Long id_person) {
 		this.id_person = id_person;
+	}
+	public String getCodeIllustrator() {
+		return codeIllustrator;
+	}
+	public void setCodeIllustrator(String codeIllustrator) {
+		this.codeIllustrator = codeIllustrator;
+	}
+	public String getNameIllustrator() {
+		return nameIllustrator;
+	}
+	public void setNameIllustrator(String nameIllustrator) {
+		this.nameIllustrator = nameIllustrator;
+	}
+	public String getSurnameIllustrator() {
+		return surnameIllustrator;
+	}
+	public void setSurnameIllustrator(String surnameIllustrator) {
+		this.surnameIllustrator = surnameIllustrator;
+	}
+	public String getCodeBook() {
+		return codeBook;
+	}
+	public void setCodeBook(String codeBook) {
+		this.codeBook = codeBook;
+	}
+	public String getTitleBook() {
+		return titleBook;
+	}
+	public void setTitleBook(String titleBook) {
+		this.titleBook = titleBook;
 	}
 }

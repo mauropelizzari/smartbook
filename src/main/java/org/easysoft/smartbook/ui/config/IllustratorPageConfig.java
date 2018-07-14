@@ -10,8 +10,12 @@ public class IllustratorPageConfig extends BasePageConfig<Illustrator> {
 	
 	@Override
 	public Grid<Illustrator> getGrid() {
-		Grid<Illustrator> grid = new Grid<Illustrator>(Illustrator.class);
-//		grid.setColumns("id","code","description");
+		Grid<Illustrator> grid = new Grid<>();
+		grid.addColumn(Illustrator::getCodeIllustrator).setCaption("CODICE");
+		grid.addColumn(Illustrator::getNameIllustrator).setCaption("NOME");
+		grid.addColumn(Illustrator::getSurnameIllustrator).setCaption("COGNOME");
+		grid.addColumn(Illustrator::getCodeBook).setCaption("CODICE LIBRO");
+		grid.addColumn(Illustrator::getTitleBook).setCaption("TITOLO LIBRO");
 		return grid;
 	}
 

@@ -21,6 +21,7 @@ public class SmbkPage extends VerticalLayout {
 	public SmbkPage(SmbkMenuService menuService) {
 		super();
 		this.setSpacing(false);
+		this.setWidth("100%");
 		init(menuService);
 	}
 	

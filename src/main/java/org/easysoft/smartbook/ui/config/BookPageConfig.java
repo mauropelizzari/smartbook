@@ -10,8 +10,12 @@ public class BookPageConfig extends BasePageConfig<Book> {
 	
 	@Override
 	public Grid<Book> getGrid() {
-		Grid<Book> grid = new Grid<Book>(Book.class);
-//		grid.setColumns("id","code","description");
+		Grid<Book> grid = new Grid<>();
+		grid.addColumn(Book::getCode).setCaption("CODICE");
+		grid.addColumn(Book::getTitle).setCaption("TITOLO");
+		grid.addColumn(Book::getEditor).setCaption("CASA EDITRICE");
+		grid.addColumn(Book::getArgument).setCaption("GENERE");
+		grid.addColumn(Book::getDateInsertFormatted).setCaption("DATA INSERIMENTO");
 		return grid;
 	}
 

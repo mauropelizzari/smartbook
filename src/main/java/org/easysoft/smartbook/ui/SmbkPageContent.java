@@ -24,7 +24,7 @@ public class SmbkPageContent extends VerticalLayout {
 	private Grid grid;
 	
 	public SmbkPageContent() {
-		super();
+		this.setWidth("100%");
 		this.setSpacing(false);
 	}
 
@@ -39,6 +39,7 @@ public class SmbkPageContent extends VerticalLayout {
 
 		this.grid = pageConfig.getGrid();
 		this.grid.setItems(list);
+		this.grid.setWidth("100%");
 		
 		this.addComponent(this.grid);
 	}
